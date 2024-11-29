@@ -14,3 +14,16 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## running my app
+ensure you have flutter installed then run
+
+```
+ flutter run
+```
+then in the main.dart file you can swithch it to Firstpage to view the two navbars
+
+```
+ home: SecondPage(),
+ ```
