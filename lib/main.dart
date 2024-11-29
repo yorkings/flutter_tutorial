@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:tutorial_prac/Homepage.dart';
+import 'package:tutorial_prac/second_page.dart';
+import 'package:tutorial_prac/settings.dart';
+import 'first_page.dart';
 void main() {
   runApp(const MyApp());
 }
 
-void userTapped() {
-  print("user tapped");
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,19 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: GestureDetector(
-            onTap: userTapped,
-            child: Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[100],
-              child: Center(child: Text("tap me !")),
-            ),
-          ),
-        ),
-      ),
+      home: SecondPage(),
+      routes: {
+          '/first':(context)=>FirstPage(),
+          '/second':(context)=>SecondPage(),
+          '/homepage':(context)=>Homepage(),
+          '/settings':(context) =>Settings()
+        },
     );
   }
 }
